@@ -8,11 +8,9 @@ const skills = [
   'Node.js',
   'Tailwind CSS',
   'PostgreSQL',
+  'Express.js',
   'MongoDB',
-  'Git',
-  'Docker',
-  'AWS',
-  'Figma',
+  'Git and Github',
 ];
 
 export function Skills() {

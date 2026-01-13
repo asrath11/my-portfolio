@@ -6,9 +6,12 @@ export function About() {
           About Me
         </h2>
         <p className='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7'>
-          I started my coding journey 5 years ago... [Add more personal details
-          here]. I specialize in building scalable web applications using modern
-          technologies. When I'm not coding, you can find me... [Hobbies].
+          I am a backend-focused developer with hands-on experience building
+          scalable and secure applications. I specialize in backend APIs,
+          authentication, real-time systems, and database design. I enjoy turning
+          complex problems into clean, maintainable code. I&apos;m actively
+          seeking entry-level Backend Developer or Backend-focused Full Stack
+          roles where I can contribute to real products and grow as an engineer.
         </p>
       </div>
     </section>
