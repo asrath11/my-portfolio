@@ -15,7 +15,7 @@ const projects = [
       'PostgreSQL',
       'Prisma',
       'NextAuth.js',
-      'OpenAI API',
+      'Gemini AI API',
     ],
     link: 'https://ai-interviewer-nine-lovat.vercel.app',
     github: 'https://github.com/asrath11/ai-interviewer',
