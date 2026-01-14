@@ -6,15 +6,6 @@ import { Button } from '@/components/ui/Button';
 
 const projects = [
   {
-    title: 'Real-Time Chat Application',
-    description:
-      'A scalable real-time chat application built with Node.js, TypeScript, Express, MongoDB, and Socket.IO. Features secure JWT authentication, real-time messaging, presence indicators, typing statuses, and group chat support.',
-    tags: ['Node.js', 'Express', 'MongoDB', 'Socket.IO', 'TypeScript', 'React'],
-    link: 'https://chat-application-mern-frontend.vercel.app/',
-    github: 'https://github.com/asrath11/chat-application-mern',
-    image: '/projects/chat-application.jpeg', // No image yet
-  },
-  {
     title: 'AI Interview Platform',
     description:
       "An AI-powered interview platform that dynamically generates interview questions based on a user's resume, captures responses, and provides insights. Features secure Google OAuth, AI question generation, and analytics dashboards.",
@@ -30,11 +21,23 @@ const projects = [
     github: 'https://github.com/asrath11/ai-interviewer',
     image: '/projects/ai-interview.png',
   },
+  {
+    title: 'Real-Time Chat Application',
+    description:
+      'A scalable real-time chat application built with Node.js, TypeScript, Express, MongoDB, and Socket.IO. Features secure JWT authentication, real-time messaging, presence indicators, typing statuses, and group chat support.',
+    tags: ['Node.js', 'Express', 'MongoDB', 'Socket.IO', 'TypeScript', 'React'],
+    link: 'https://chat-application-mern-frontend.vercel.app/',
+    github: 'https://github.com/asrath11/chat-application-mern',
+    image: '/projects/chat-application.jpeg', // No image yet
+  },
 ];
 
 export function Projects() {
   return (
-    <section id='projects' className='max-w-screen py-12 px-4 md:py-24 lg:py-32'>
+    <section
+      id='projects'
+      className='w-full py-12 px-4 md:py-24 lg:py-32 bg-muted/50 dark:bg-muted/10'
+    >
       <div className='mx-auto flex max-w-xl flex-col items-center gap-4 text-center mb-12'>
         <h2 className='text-3xl font-bold leading-[1.1] sm:text-3xl md:text-6xl'>
           Featured Projects
