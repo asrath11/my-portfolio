@@ -2,14 +2,28 @@ import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import { z } from 'zod';
 
+import { createRateLimiter } from '@/lib/rate-limit';
+
 const contactSchema = z.object({
   name: z.string().min(2, 'Name is required'),
-  email: z.string().email('Invalid email'),
+  email: z.email('Invalid email'),
   message: z.string().min(10, 'Message must be at least 10 characters'),
 });
 
+// Initialize rate limiter: 3 requests per 10 minutes
+const limiter = createRateLimiter();
+
 export async function POST(req: Request) {
   try {
+    const ip = req.headers.get('x-forwarded-for') || 'unknown';
+
+    if (!limiter.check(ip)) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429 }
+      );
+    }
+
     const body = await req.json();
     const result = contactSchema.safeParse(body);
 

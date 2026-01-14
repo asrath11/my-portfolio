@@ -1,7 +1,11 @@
-import Link from 'next/link';
+'use client';
+
 import { Button } from '@/components/ui/Button';
+import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 
 export function Hero() {
+  const { scrollToSection } = useSmoothScroll();
+
   return (
     <section className='flex min-h-[calc(100vh-4rem)] max-w-screen flex-col items-center justify-center gap-8 px-4 py-8 text-center md:py-12 lg:py-24'>
       <div className='flex flex-col gap-6 max-w-4xl'>
@@ -17,11 +21,15 @@ export function Hero() {
           PostgreSQL, and Socket.IO.
         </p>
         <div className='flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center'>
-          <Button size='lg' asChild>
-            <Link href='#projects'>View Projects</Link>
+          <Button size='lg' onClick={() => scrollToSection('projects')}>
+            View Projects
           </Button>
-          <Button size='lg' variant='outline' asChild>
-            <Link href='#contact'>Contact Me</Link>
+          <Button
+            size='lg'
+            variant='outline'
+            onClick={() => scrollToSection('contact')}
+          >
+            Contact Me
           </Button>
         </div>
       </div>
